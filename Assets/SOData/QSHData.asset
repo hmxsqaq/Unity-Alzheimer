@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8a91210b3464ed0a37bf0bc91a11ea5, type: 3}
+  m_Name: QSHData
+  m_EditorClassIdentifier: 
+  characterName: QSH
+  age: 18
+  hasPhone: 0
+  phoneNumber: 18321938171
+  hasHomeAddress: 0
+  homeAddress: "\u4E2D\u56FD\u4F20\u5A92\u5927\u5B66"
+  introduction: "\u6B7B\u4E86\u5F97\u4E86\u6B7B\u4E86\u5F97\u4E86\u6B7B\u4E86\u5F97\u4E86\n\u6B7B\u4E86\u5F97\u4E86\u6B7B\u4E86\u5F97\u4E86\u6B7B\u4E86\u5F97\u4E86\u6B7B\u4E86\u5F97\u4E86\u6B7B\u4E86\u5F97\u4E86\u6B7B\u4E86\u5F97\u4E86\u6B7B\u4E86\u5F97\u4E86\u6B7B\u4E86\u5F97\u4E86\u6B7B\u4E86\u5F97\u4E86\u6B7B\u4E86\u5F97\u4E86\u6B7B\u4E86\u5F97\u4E86\u6B7B\u4E86\u5F97\u4E86\u6B7B\u4E86\u5F97\u4E86\u6B7B\u4E86\u5F97\u4E86\u6B7B\u4E86\u5F97\u4E86\u6B7B\u4E86\u5F97\u4E86"
+  characterSprite: {fileID: 21300046, guid: 714b73f392de6480abfb12e77af4c662, type: 3}
