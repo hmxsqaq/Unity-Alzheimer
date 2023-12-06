@@ -18,7 +18,7 @@ namespace SO
         [ShowIf("hasHomeAddress")]
         public string homeAddress;
 
-        [Multiline]
+        [Multiline(15)]
         public string introduction;
 
         [PreviewField(150, ObjectFieldAlignment.Center)]

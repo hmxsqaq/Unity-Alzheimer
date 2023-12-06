@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db6ae0dfef7f4ae3a5c012d68b23daeb, type: 3}
   m_Name: PublicBoard
   m_EditorClassIdentifier: 
-  interactable: 1
-  vacant: 1
+  interactable: 0
+  vacant: 0

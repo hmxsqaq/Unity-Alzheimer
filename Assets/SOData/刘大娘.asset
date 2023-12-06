@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8a91210b3464ed0a37bf0bc91a11ea5, type: 3}
+  m_Name: "\u5218\u5927\u5A18"
+  m_EditorClassIdentifier: 
+  characterName: "\u5218\u5927\u5A18"
+  age: 63
+  hasPhone: 0
+  phoneNumber: 
+  hasHomeAddress: 0
+  homeAddress: 
+  introduction: "\u5927\u5927\u54A7\u54A7\uFF0C\u4EBA\u597D\u4F46\u8BDD\u591A\uFF0C\u559C\u6B22\u778E\u62C5\u5FC3\uFF0C\u60C5\u7EEA\u6613\u6FC0\u52A8\u7684\u5E7F\u573A\u821E\u5927\u5A18\u3002\u770B\u5230\u4E86\u793E\u533A\u7684\u516C\u544A\uFF0C\u89C9\u5F97\u81EA\u5DF1\u8EAB\u60A3\u963F\u5C14\u5179\u6D77\u9ED8\u75C7\uFF0C\u4E8E\u662F\u524D\u6765\u8FDB\u884C\u54A8\u8BE2\u3002"
+  characterSprite: {fileID: -1648762905, guid: b902f313d3b58ba42971c6fb11edbbe5, type: 3}

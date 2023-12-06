@@ -16,13 +16,16 @@ namespace Interactable
             _spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
-        protected override void OnClick()
+        protected override void OnMouseOver()
         {
-            if (PublicBoard.Instance.Vacant)
-            {
-                _spriteRenderer.sprite = doNotDisturbSprite;
-                PublicBoard.Instance.Vacant = false;
-            }
+            highlight.highlighted = PublicBoard.Instance.Interactable && PublicBoard.Instance.Vacant;
         }
+
+        protected override void OnValidClick()
+        {
+            if (PublicBoard.Instance.Vacant) _spriteRenderer.sprite = doNotDisturbSprite;
+        }
+
+        public void ChangeToVacantSprite() => _spriteRenderer.sprite = vacantSprite;
     }
 }

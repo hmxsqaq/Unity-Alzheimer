@@ -1,12 +1,17 @@
-﻿using UnityEngine;
+﻿using SO;
 
 namespace Interactable
 {
     public class GuideBook : InteractableItem
     {
-        protected override void OnClick()
+        protected override void OnMouseOver()
         {
-            throw new System.NotImplementedException();
+            highlight.highlighted = PublicBoard.Instance.Interactable;
+        }
+
+        protected override void OnValidClick()
+        {
+
         }
     }
 }
