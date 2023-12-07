@@ -1,4 +1,5 @@
-﻿using SO;
+﻿using Hmxs.Toolkit.Flow.FungusTools;
+using SO;
 using UnityEngine;
 
 namespace Interactable
@@ -16,15 +17,15 @@ namespace Interactable
             _spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
-        protected override void OnMouseOver()
-        {
-            highlight.highlighted = PublicBoard.Instance.Interactable && PublicBoard.Instance.Vacant;
-        }
-
         protected override void OnValidClick()
         {
-            if (PublicBoard.Instance.Vacant) _spriteRenderer.sprite = doNotDisturbSprite;
+            _spriteRenderer.sprite = doNotDisturbSprite;
+            FlowchartManager.ExecuteBlock(PublicBoard.Instance.blockFlow[PublicBoard.Instance.currentBlockIndex]);
+            if (PublicBoard.Instance.currentBlockIndex < PublicBoard.Instance.blockFlow.Count - 1)
+                PublicBoard.Instance.currentBlockIndex++;
         }
+
+        protected override bool JudgeInteractState() => PublicBoard.Instance.Interactable && PublicBoard.Instance.Vacant;
 
         public void ChangeToVacantSprite() => _spriteRenderer.sprite = vacantSprite;
     }

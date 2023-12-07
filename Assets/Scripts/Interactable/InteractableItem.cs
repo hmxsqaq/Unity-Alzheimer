@@ -15,20 +15,19 @@ namespace Interactable
             highlight = GetComponent<HighlightEffect2D>();
         }
 
-        protected abstract void OnMouseOver();
+        private void OnMouseOver() => highlight.highlighted = JudgeInteractState();
 
-        private void OnMouseExit()
-        {
-            highlight.highlighted = false;
-        }
+        private void OnMouseExit() => highlight.highlighted = false;
 
         private void OnMouseDown()
         {
-            if (PublicBoard.Instance.Interactable)
+            if (JudgeInteractState())
                 OnValidClick();
         }
 
         protected abstract void OnValidClick();
+
+        protected abstract bool JudgeInteractState();
 
         public void HighlightOn() => highlight.highlighted = true;
         public void HighlightOff() => highlight.highlighted = false;

@@ -1,17 +1,17 @@
 ﻿using SO;
+using UI;
+using UnityEngine;
 
 namespace Interactable
 {
     public class Phone : InteractableItem
     {
-        protected override void OnMouseOver()
-        {
-            highlight.highlighted = PublicBoard.Instance.Interactable && PublicBoard.Instance.Vacant;
-        }
+        [SerializeField] private PhoneUIController phoneUIController;
 
-        protected override void OnValidClick()
-        {
+        protected override void OnValidClick() => phoneUIController.gameObject.SetActive(true);
 
-        }
+        protected override bool JudgeInteractState() => PublicBoard.Instance.Interactable &&
+                                                        PublicBoard.Instance.Vacant &&
+                                                        PublicBoard.Instance.availableData.Find(data => data.hasPhone) != null;
     }
 }
