@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: "\u725B\u7237\u7237"
   age: 67
-  hasPhone: 1
+  hasPhone: 0
   phoneNumber: 66678823
   phoneEvent:
     m_PersistentCalls:

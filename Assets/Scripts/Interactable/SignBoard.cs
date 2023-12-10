@@ -19,13 +19,15 @@ namespace Interactable
 
         protected override void OnValidClick()
         {
+            HighlightOff();
             _spriteRenderer.sprite = doNotDisturbSprite;
             FlowchartManager.ExecuteBlock(PublicBoard.Instance.blockFlow[PublicBoard.Instance.currentBlockIndex]);
-            if (PublicBoard.Instance.currentBlockIndex < PublicBoard.Instance.blockFlow.Count - 1)
-                PublicBoard.Instance.currentBlockIndex++;
+            PublicBoard.Instance.currentBlockIndex++;
         }
 
-        protected override bool JudgeInteractState() => PublicBoard.Instance.Interactable && PublicBoard.Instance.Vacant;
+        protected override bool JudgeInteractState() => PublicBoard.Instance.Interactable &&
+                                                        PublicBoard.Instance.Vacant &&
+                                                        PublicBoard.Instance.currentBlockIndex < PublicBoard.Instance.blockFlow.Count;
 
         public void ChangeToVacantSprite() => _spriteRenderer.sprite = vacantSprite;
     }

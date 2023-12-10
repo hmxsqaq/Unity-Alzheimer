@@ -8,7 +8,11 @@ namespace Interactable
     {
         [SerializeField] private PhoneUIController phoneUIController;
 
-        protected override void OnValidClick() => phoneUIController.gameObject.SetActive(true);
+        protected override void OnValidClick()
+        {
+            HighlightOff();
+            phoneUIController.gameObject.SetActive(true);
+        }
 
         protected override bool JudgeInteractState() => PublicBoard.Instance.Interactable &&
                                                         PublicBoard.Instance.Vacant &&

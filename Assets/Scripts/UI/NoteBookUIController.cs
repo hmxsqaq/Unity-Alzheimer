@@ -1,4 +1,5 @@
 ﻿using Hmxs.Toolkit.Flow.FungusTools;
+using Manager;
 using SO;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,14 +20,14 @@ namespace UI
         private void OnEnable()
         {
             PublicBoard.Instance.Interactable = false;
-            FlowchartManager.ExecuteBlock("PauseDialogInput");
+            DialogPauseManager.Instance.PauseManager();
             ShowLast();
         }
 
         private void OnDisable()
         {
             PublicBoard.Instance.Interactable = true;
-            FlowchartManager.ExecuteBlock("ResumeDialogInput");
+            DialogPauseManager.Instance.ResumeManager();
         }
 
         private void Show(CharacterData data)
@@ -43,7 +44,7 @@ namespace UI
             {
                 phoneNumberText.text = "<b>电话：</b>" + data.phoneNumber;
                 phoneButton.onClick.RemoveAllListeners();
-                if (data.PhoneHasBeingTriggered)
+                if (!PublicBoard.Instance.Vacant || data.PhoneHasBeingTriggered)
                     phoneButton.interactable = false;
                 else
                 {
@@ -56,7 +57,7 @@ namespace UI
             {
                 addressText.text = "<b>住址：</b>" + data.homeAddress;
                 addressButton.onClick.RemoveAllListeners();
-                if (data.HomeAddressHasBeingTriggered)
+                if (!PublicBoard.Instance.Vacant || data.HomeAddressHasBeingTriggered)
                     addressButton.interactable = false;
                 else
                 {

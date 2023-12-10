@@ -55,10 +55,5 @@ namespace SO
             currentDataIndex = 0;
             currentBlockIndex = 0;
         }
-#if UNITY_EDITOR
-
-#else
-        private void OnEnable() => Reset();
-#endif
     }
 }

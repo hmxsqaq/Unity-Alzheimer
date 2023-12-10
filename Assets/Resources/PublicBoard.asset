@@ -14,13 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactable: 1
   vacant: 1
-  availableData:
-  - {fileID: 11400000, guid: da6c4e09241129b40bfb42751bcdb1e3, type: 2}
-  - {fileID: 11400000, guid: 1c4d63e2445302240a151801be7f2309, type: 2}
-  - {fileID: 11400000, guid: a3491b50a72f06f4f96db03cb7422839, type: 2}
-  - {fileID: 11400000, guid: 0d2780944c4beb440aaf61c66cf826fc, type: 2}
-  currentDataIndex: 3
+  availableData: []
+  currentDataIndex: 0
   blockFlow:
-  - "1\u5218\u5927\u5A18"
-  - "2\u56FE\u56FE"
-  currentBlockIndex: 1
+  - "\u5218\u5927\u5A18"
+  - "\u56FE\u56FE"
+  - "\u5F13\u5927\u4F2F"
+  currentBlockIndex: 0

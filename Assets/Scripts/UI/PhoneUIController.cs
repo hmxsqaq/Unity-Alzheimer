@@ -1,4 +1,5 @@
 ﻿using Hmxs.Toolkit.Flow.FungusTools;
+using Manager;
 using SO;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,14 +14,14 @@ namespace UI
         private void OnEnable()
         {
             PublicBoard.Instance.Interactable = false;
-            FlowchartManager.ExecuteBlock("PauseDialogInput");
+            DialogPauseManager.Instance.PauseManager();
             SpawnPhoneNumber();
         }
 
         private void OnDisable()
         {
             PublicBoard.Instance.Interactable = true;
-            FlowchartManager.ExecuteBlock("ResumeDialogInput");
+            DialogPauseManager.Instance.ResumeManager();
             ClearContent();
         }
 

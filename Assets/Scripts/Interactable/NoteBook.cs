@@ -8,7 +8,11 @@ namespace Interactable
     {
         [SerializeField] private NoteBookUIController noteBookUI;
 
-        protected override void OnValidClick() => noteBookUI.gameObject.SetActive(true);
+        protected override void OnValidClick()
+        {
+            HighlightOff();
+            noteBookUI.gameObject.SetActive(true);
+        }
 
         protected override bool JudgeInteractState() => PublicBoard.Instance.Interactable && PublicBoard.Instance.availableData.Count > 0;
     }

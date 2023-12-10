@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: "\u9C7C\u5927\u4F2F"
   age: 72
-  hasPhone: 1
+  hasPhone: 0
   phoneNumber: 66637749
   phoneEvent:
     m_PersistentCalls:
@@ -44,7 +44,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   phoneHasBeingTriggered: 0
-  hasHomeAddress: 1
+  hasHomeAddress: 0
   homeAddress: "\u4E13\u67D0\u5C0F\u533A31\u53F7\u697C\u4E00\u5355\u5143302"
   homeAddressEvent:
     m_PersistentCalls:

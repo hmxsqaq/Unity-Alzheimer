@@ -15,15 +15,15 @@ namespace SO
 
         [Title("Phone")]
         public bool hasPhone;
-        [ShowIf("hasPhone")] public string phoneNumber;
-        [ShowIf("hasPhone")] public UnityEvent phoneEvent;
-        [ShowIf("hasPhone")] [SerializeField] private bool phoneHasBeingTriggered;
+        public string phoneNumber;
+        public UnityEvent phoneEvent;
+        [SerializeField] private bool phoneHasBeingTriggered;
 
         [Title("Address")]
         public bool hasHomeAddress;
-        [ShowIf("hasHomeAddress")] public string homeAddress;
-        [ShowIf("hasHomeAddress")] public UnityEvent homeAddressEvent;
-        [ShowIf("hasHomeAddress")] [SerializeField] private bool homeAddressHasBeingTriggered;
+        public string homeAddress;
+        public UnityEvent homeAddressEvent;
+        [SerializeField] private bool homeAddressHasBeingTriggered;
 
         [Multiline(15)]
         public string introduction;
@@ -43,10 +43,24 @@ namespace SO
             set => homeAddressHasBeingTriggered = value;
         }
 
+        public bool HasPhone
+        {
+            get => hasPhone;
+            set => hasPhone = value;
+        }
+
+        public bool HasHomeAddress
+        {
+            get => hasHomeAddress;
+            set => hasHomeAddress = value;
+        }
+
         public void ExecuteBlock(string blockName) => FlowchartManager.ExecuteBlock(blockName);
 
         private void OnEnable()
         {
+            HasPhone = false;
+            HasHomeAddress = false;
             PhoneHasBeingTriggered = false;
             HomeAddressHasBeingTriggered = false;
         }
