@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Hmxs.Toolkit.Base.Singleton;
+using Hmxs.Toolkit.Flow.FungusTools;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -54,6 +56,16 @@ namespace SO
             availableData = new List<CharacterData>();
             currentDataIndex = 0;
             currentBlockIndex = 0;
+        }
+
+        public void CheckGameEnd()
+        {
+            if (currentBlockIndex < blockFlow.Count || availableData.Count < 3)
+                return;
+            if (availableData.Any(data => (data.hasPhone && !data.PhoneHasBeingTriggered) ||
+                                          (data.hasHomeAddress && !data.HomeAddressHasBeingTriggered)))
+                return;
+            FlowchartManager.ExecuteBlock("End");
         }
     }
 }
